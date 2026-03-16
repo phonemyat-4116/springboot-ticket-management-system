@@ -1,0 +1,41 @@
+services:
+
+  db:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: mydb
+      POSTGRES_PASSWORD: changemeinprod!
+    ports:
+      - 5432:5432
+#    volumes:
+#      - db_data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+      - 8888:8080
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    volumes:
+      - keycloak-data:/opt/keycloak/data
+    ports:
+      - 9090:8080
+    command:
+      - start-dev
+      - --db=dev-file
+
+volumes:
+#  db_data:
+  keycloak-data:
+    driver: local
+
+# In real production setups, Keycloak uses PostgreSQL.
+## Port Nature
+## Host Port : Container Port
