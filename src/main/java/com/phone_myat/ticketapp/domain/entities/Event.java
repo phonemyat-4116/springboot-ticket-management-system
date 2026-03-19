@@ -1,4 +1,4 @@
-package com.phone_myat.ticketapp.domain;
+package com.phone_myat.ticketapp.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,4 +1,4 @@
-package com.phone_myat.ticketapp.domain;
+package com.phone_myat.ticketapp.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,7 +16,6 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class User {
     @Id
     @Column(name = "id", updatable = false, nullable = false)
