@@ -39,3 +39,7 @@ public class CreateEventRequestDto {
     private List<CreateTicketTypeRequestDto> ticketTypes = new ArrayList<>();
 
 }
+
+/**
+ * These DTO inside the dtos package are  (API layer)
+ */

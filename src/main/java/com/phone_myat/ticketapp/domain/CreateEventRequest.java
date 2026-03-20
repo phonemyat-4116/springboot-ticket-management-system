@@ -25,3 +25,7 @@ public class CreateEventRequest {
     private List<CreateTicketTypeRequest> ticketTypes = new ArrayList<>();
 
 }
+
+/**
+ * These are (domain/service) layer
+ */
