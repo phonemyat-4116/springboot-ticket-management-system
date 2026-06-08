@@ -30,7 +30,6 @@ public class EventController {
     @PostMapping
     public ResponseEntity<CreateEventResponseDto> createEvent(@AuthenticationPrincipal Jwt jwt,
                                                               @Valid @RequestBody CreateEventRequestDto dto) {
-
         // Convert DTO to domain object
         CreateEventRequest createEventRequest = eventMapper.fromDto(dto);
 
