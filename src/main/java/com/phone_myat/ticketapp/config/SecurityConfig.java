@@ -21,11 +21,15 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth ->
                         auth.anyRequest().authenticated())
+
                 .csrf(AbstractHttpConfigurer::disable)
+
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+
                 .oauth2ResourceServer(oauth2 ->
                         oauth2.jwt(Customizer.withDefaults()))
+
                 .addFilterAfter(userProvisioningFilter, BearerTokenAuthenticationFilter.class);
 
         return http.build();

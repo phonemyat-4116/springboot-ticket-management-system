@@ -23,3 +23,14 @@ public class CreateTicketTypeRequestDto {
     private Integer totalAvailable;
 
 }
+
+/*
+
+If a user sends a JSON request to create a ticket type but completely leaves out the totalAvailable field:
+With Integer: The field will be null. Your code knows the user forgot to provide a number.
+You can then use @NotNull to show a clear error message.
+
+With int: Java cannot hold a null value in a primitive type.
+It will automatically assign a default value of 0.
+Your backend will mistakenly think the user explicitly wanted exactly 0 tickets available.
+ */
