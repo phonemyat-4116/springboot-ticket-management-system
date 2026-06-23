@@ -28,8 +28,8 @@ public class CreateEventRequestDto {
     @NotBlank(message = "Venue information is required")
     private String venue;
 
-    private LocalDateTime saleStart;
-    private LocalDateTime saleEnd;
+    private LocalDateTime salesStart;
+    private LocalDateTime salesEnd;
 
     @NotNull(message = "Event status must be provided")
     private EventStatusEnum status;

@@ -21,8 +21,8 @@ public class CreateEventResponseDto {
     private LocalDateTime start;
     private LocalDateTime end;
     private String venue;
-    private LocalDateTime saleStart;
-    private LocalDateTime saleEnd;
+    private LocalDateTime salesStart;
+    private LocalDateTime salesEnd;
     private EventStatusEnum status;
     private List<CreateTicketTypeResponseDto> ticketTypes = new ArrayList<>();
     private LocalDateTime createdAt;

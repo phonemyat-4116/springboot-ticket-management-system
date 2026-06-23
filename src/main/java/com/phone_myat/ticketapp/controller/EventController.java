@@ -24,8 +24,8 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class EventController {
 
-    private EventMapper eventMapper;
-    private EventService eventService;
+    private final EventMapper eventMapper;
+    private final EventService eventService;
 
     @PostMapping
     public ResponseEntity<CreateEventResponseDto> createEvent(@AuthenticationPrincipal Jwt jwt,
@@ -47,3 +47,10 @@ public class EventController {
     }
 
 }
+
+/*
+CreateTicketTypeRequestDto is indeed being used indirectly through CreateEventRequestDto and
+automatically converted by EventMapper (MapStruct).
+
+It does not need to appear as a separate controller parameter.
+ */

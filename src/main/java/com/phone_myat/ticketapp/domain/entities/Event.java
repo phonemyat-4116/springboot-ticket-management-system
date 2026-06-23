@@ -59,7 +59,8 @@ public class Event {
     private List<User> staffs = new ArrayList<>();
     // ============
 
-    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
+    @Builder.Default
+    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TicketType> ticketTypes = new ArrayList<>();
 
     @CreatedDate
@@ -67,7 +68,7 @@ public class Event {
     private LocalDateTime createdAt;
 
     @LastModifiedDate
-    @Column(name = "updated_at", updatable = false, nullable = false)
+    @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
     @Override
@@ -80,5 +81,20 @@ public class Event {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, start, end, venue, salesStart, salesEnd, status, createdAt, updatedAt);
+    }
+
+    //=============
+
+    // Link each TicketType back to the Event (ticketType.setEvent(event)).
+    public void addTicketType(TicketType ticketType) {
+        ticketTypes.add(ticketType);
+        ticketType.setEvent(this);
+    }
+
+    public void addTicketTypes(List<TicketType> ticketTypes) {
+
+        for(TicketType ticketType : ticketTypes) {
+            addTicketType(ticketType);
+        }
     }
 }

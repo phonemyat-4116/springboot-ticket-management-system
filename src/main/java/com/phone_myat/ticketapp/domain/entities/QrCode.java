@@ -39,7 +39,7 @@ public class QrCode {
     private LocalDateTime createdAt;
 
     @LastModifiedDate
-    @Column(name = "updated_at", updatable = false, nullable = false)
+    @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
     @Override

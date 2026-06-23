@@ -131,3 +131,5 @@ if (authentication.getPrincipal() instanceof Jwt jwt) {
 
 If the principal is not a Jwt, the condition is simply false, and the block is skipped
  */
+
+// UserProvisioningFilter provisions the application's local user record. It does not create users in Keycloak.
