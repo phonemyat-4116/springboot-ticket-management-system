@@ -1,6 +1,6 @@
 package com.phone_myat.ticketapp.mappers;
 
-import com.phone_myat.ticketapp.domain.CreateTicketTypeRequest;
+import com.phone_myat.ticketapp.domain.requests.CreateTicketTypeRequest;
 import com.phone_myat.ticketapp.domain.entities.TicketType;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;

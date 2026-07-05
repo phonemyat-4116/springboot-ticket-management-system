@@ -1,7 +1,6 @@
-package com.phone_myat.ticketapp.domain;
+package com.phone_myat.ticketapp.domain.requests;
 
 import com.phone_myat.ticketapp.domain.entities.EventStatusEnum;
-import com.phone_myat.ticketapp.domain.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

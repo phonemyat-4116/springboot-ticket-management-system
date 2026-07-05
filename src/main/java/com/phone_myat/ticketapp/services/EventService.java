@@ -1,6 +1,6 @@
 package com.phone_myat.ticketapp.services;
 
-import com.phone_myat.ticketapp.domain.CreateEventRequest;
+import com.phone_myat.ticketapp.domain.requests.CreateEventRequest;
 import com.phone_myat.ticketapp.domain.entities.Event;
 
 import java.util.UUID;

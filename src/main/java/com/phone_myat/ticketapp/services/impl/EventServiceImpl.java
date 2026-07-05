@@ -1,8 +1,7 @@
 package com.phone_myat.ticketapp.services.impl;
 
-import com.phone_myat.ticketapp.domain.CreateEventRequest;
+import com.phone_myat.ticketapp.domain.requests.CreateEventRequest;
 import com.phone_myat.ticketapp.domain.entities.Event;
-import com.phone_myat.ticketapp.domain.entities.TicketType;
 import com.phone_myat.ticketapp.domain.entities.User;
 import com.phone_myat.ticketapp.exceptions.UserNotFoundException;
 import com.phone_myat.ticketapp.mappers.EventMapper;
@@ -14,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.UUID;
 
 @Service

@@ -1,6 +1,6 @@
-package com.phone_myat.ticketapp.domain.dtos;
+package com.phone_myat.ticketapp.domain.dtos.event;
 
-import com.phone_myat.ticketapp.domain.CreateTicketTypeRequest;
+import com.phone_myat.ticketapp.domain.dtos.ticket.CreateTicketTypeRequestDto;
 import com.phone_myat.ticketapp.domain.entities.EventStatusEnum;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;

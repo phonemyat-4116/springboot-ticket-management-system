@@ -1,8 +1,8 @@
 package com.phone_myat.ticketapp.controller;
 
-import com.phone_myat.ticketapp.domain.CreateEventRequest;
-import com.phone_myat.ticketapp.domain.dtos.CreateEventRequestDto;
-import com.phone_myat.ticketapp.domain.dtos.CreateEventResponseDto;
+import com.phone_myat.ticketapp.domain.requests.CreateEventRequest;
+import com.phone_myat.ticketapp.domain.dtos.event.CreateEventRequestDto;
+import com.phone_myat.ticketapp.domain.dtos.event.CreateEventResponseDto;
 import com.phone_myat.ticketapp.domain.entities.Event;
 import com.phone_myat.ticketapp.mappers.EventMapper;
 import com.phone_myat.ticketapp.services.EventService;

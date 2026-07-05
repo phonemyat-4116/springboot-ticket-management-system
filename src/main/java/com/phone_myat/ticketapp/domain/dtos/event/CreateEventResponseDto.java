@@ -1,6 +1,6 @@
-package com.phone_myat.ticketapp.domain.dtos;
+package com.phone_myat.ticketapp.domain.dtos.event;
 
-import com.phone_myat.ticketapp.domain.CreateTicketTypeRequest;
+import com.phone_myat.ticketapp.domain.dtos.ticket.CreateTicketTypeResponseDto;
 import com.phone_myat.ticketapp.domain.entities.EventStatusEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;

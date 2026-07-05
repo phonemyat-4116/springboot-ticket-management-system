@@ -1,0 +1,30 @@
+spring:
+
+  application:
+    name: ticketapp
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/ticketapp?currentSchema=public
+    username: postgres
+    password: devpassword
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: UTC
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9090/realms/event-ticket-platform
+
+keycloak:
+  token-uri: http://localhost:9090/realms/event-ticket-platform/protocol/openid-connect/token
+  client-id: event-ticket-platform-app

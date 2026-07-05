@@ -19,8 +19,9 @@ public class SecurityConfig {
             UserProvisioningFilter userProvisioningFilter) throws Exception {
 
         http
-                .authorizeHttpRequests(auth ->
-                        auth.anyRequest().authenticated())
+                .authorizeHttpRequests(auth -> auth
+                                .requestMatchers("/api/v1/auth/login").permitAll()
+                                .anyRequest().authenticated())
 
                 .csrf(AbstractHttpConfigurer::disable)
 

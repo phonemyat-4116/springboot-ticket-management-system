@@ -1,4 +1,4 @@
-package com.phone_myat.ticketapp.domain.dtos;
+package com.phone_myat.ticketapp.domain.dtos.ticket;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
