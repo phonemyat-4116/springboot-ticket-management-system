@@ -1,6 +1,7 @@
 package com.phone_myat.ticketapp.controller;
 
 import com.phone_myat.ticketapp.domain.dtos.ErrorDto;
+import com.phone_myat.ticketapp.exceptions.InvalidCredentialsException;
 import com.phone_myat.ticketapp.exceptions.UserNotFoundException;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
@@ -57,6 +58,15 @@ public class GlobalExceptionHandler {
         errorDto.setError(errorMessage);
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorDto);
+    }
+
+    @ExceptionHandler(InvalidCredentialsException.class)
+    public ResponseEntity<ErrorDto> handleInvalidCredentialsException(InvalidCredentialsException ex) {
+        log.error("Caught InvalidCredentialsException", ex);
+        ErrorDto errorDto = new ErrorDto();
+        errorDto.setError(ex.getMessage());
+
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorDto);
     }
 
     @ExceptionHandler(Exception.class)

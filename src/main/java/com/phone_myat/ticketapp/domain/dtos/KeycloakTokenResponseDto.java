@@ -16,4 +16,7 @@ public class KeycloakTokenResponseDto {
 
     @JsonProperty("expires_in")
     private Long expiresIn;
+
+    @JsonProperty("refresh_expires_in")
+    private Long refreshExpiresIn;
 }

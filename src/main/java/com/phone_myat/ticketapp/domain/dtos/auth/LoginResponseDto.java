@@ -8,7 +8,9 @@ import lombok.Data;
 public class LoginResponseDto {
 
     private String token;
+    private String id;
     private String role;
     private String name;
     private String email;
+    private Long expiresIn;
 }
